@@ -11,6 +11,7 @@ const Navbar = () => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
 
+  console.log(isLogin);
 
   //logout
   const handleLogout = () => {
@@ -30,7 +31,19 @@ const Navbar = () => {
             <h2 className='logo'>LearnGuitar</h2>
             <ul >
                 <li><Link to="/">Home</Link></li>
-                <li><Link to="/chords">Chords</Link></li>
+                {
+                  isLogin && 
+                  (<>
+                                <li><Link to="/chords" > Chords</Link></li>
+                  </>)
+                }
+                {
+                  !isLogin && 
+                  (<>
+                                <li><Link to="/login">Chords</Link></li>
+                  </>)
+                }
+                {/* <li><Link to="/chords">Chords</Link></li> */}
                 <li><Link to="/songs">Songs</Link></li>
                 {/* <li><Link to="/login">Login</Link></li>
                 <li><Link to="/register">Register</Link></li> */}

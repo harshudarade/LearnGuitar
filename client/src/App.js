@@ -7,7 +7,6 @@ import Chords from './screens/Chords/Chords';
 import Songs from './screens/Songs/Songs';
 import Song from "./screens/Songs/Song";
 
-
 import A from "./screens/SingleChord/aChord";
 import Am from "./screens/SingleChord/amChord";
 import B from "./screens/SingleChord/bChord";
@@ -24,7 +23,12 @@ import G from "./screens/SingleChord/gChord";
 import Gm from "./screens/SingleChord/gmChord";
 
 
+
+
+
 function App() {
+  
+
   return (
     <div className="App">
       <Router>

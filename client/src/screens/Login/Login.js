@@ -27,7 +27,11 @@ const Login = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const { data } = await axios.post("https://learnguitar.onrender.com/api/user/login", {
+      // const { data } = await axios.post("https://learnguitar.onrender.com/api/user/login", {
+      //   email: inputs.email,
+      //   password: inputs.password,
+      // });
+      const { data } = await axios.post("http://localhost:5000/api/user/login", {
         email: inputs.email,
         password: inputs.password,
       });
