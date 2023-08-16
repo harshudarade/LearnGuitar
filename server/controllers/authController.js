@@ -12,6 +12,7 @@ exports.registerController = async (req, res) => {
         message: "Please Fill all fields",
       });
     }
+    
     //exisiting user
     const exisitingUser = await userModel.findOne({ email });
     if (exisitingUser) {

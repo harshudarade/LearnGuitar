@@ -18,6 +18,10 @@ const userSchema = new mongoose.Schema(
       type: String,
       required: [true, "password is required"],
     },
+    savedSongs : [{
+      type: mongoose.Schema.Types.ObjectId,
+      ref: "songs"
+    }]
   },
   { timestamps: true }
 );

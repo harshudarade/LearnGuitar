@@ -5,6 +5,8 @@ import Register from "./screens/Register/Register";
 import Login from "./screens/Login/Login";
 import Chords from './screens/Chords/Chords';
 import Songs from './screens/Songs/Songs';
+import Song from "./screens/Songs/Song";
+
 
 import A from "./screens/SingleChord/aChord";
 import Am from "./screens/SingleChord/amChord";
@@ -37,7 +39,6 @@ function App() {
         <Routes>
           <Route path="/register" element={<Register/>}></Route>
         </Routes>
-
                 
         <Routes>
           <Route path="/login" element={<Login/>}></Route>
@@ -45,6 +46,10 @@ function App() {
 
         <Routes>
           <Route path="/songs" element={<Songs/>}></Route>
+        </Routes>
+
+        <Routes>
+          <Route path="/song" element={<Song />}></Route>
         </Routes>
 
         {/* Chord Route */}

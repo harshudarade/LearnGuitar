@@ -7,6 +7,7 @@ const bodyParser = require("body-parser");
 
 
 const userRoutes = require("./routes/authRoutes");
+const songRoutes = require("./routes/songRoutes");
 
 const app = express();
 
@@ -18,6 +19,7 @@ app.use(bodyParser.urlencoded({ limit: "30mb", extended: true}));
 app.use(express.json());
 
 app.use("/api/user" , userRoutes);
+app.use("/api/songs" , songRoutes);
 
 const port = process.env.PORT;
 
@@ -48,6 +50,5 @@ if (process.env.NODE_ENV === 'production') {
 } else {
     app.get('/', (req, res) => res.send('Please set to production'));
 }
-
 
 // https://www.youtube.com/watch?v=gWIbT1fbLlA&list=LL&index=1&ab_channel=IndianCodersz
