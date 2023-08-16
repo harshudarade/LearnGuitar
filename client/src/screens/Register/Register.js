@@ -26,18 +26,18 @@ const Register = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      // const { data } = await axios.post("https://learnguitar.onrender.com/api/user/register", {
-      //   firstName: inputs.firstName,
-      //   lastName: inputs.lastName,
-      //   email: inputs.email,
-      //   password: inputs.password
-      // });
-      const { data } = await axios.post("http://localhost:5000/api/user/register", {
+      const { data } = await axios.post("https://learnguitar.onrender.com/api/user/register", {
         firstName: inputs.firstName,
         lastName: inputs.lastName,
         email: inputs.email,
         password: inputs.password
       });
+      // const { data } = await axios.post("http://localhost:5000/api/user/register", {
+      //   firstName: inputs.firstName,
+      //   lastName: inputs.lastName,
+      //   email: inputs.email,
+      //   password: inputs.password
+      // });
       if (data.success) {
         toast.success("User Register Successfully");
         navigate("/login");
