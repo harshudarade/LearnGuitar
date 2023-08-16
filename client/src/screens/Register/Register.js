@@ -26,7 +26,7 @@ const Register = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const { data } = await axios.post("http://localhost:5000/api/user/register", {
+      const { data } = await axios.post("https://learnguitar.onrender.com/api/user/register", {
         firstName: inputs.firstName,
         lastName: inputs.lastName,
         email: inputs.email,
