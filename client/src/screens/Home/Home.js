@@ -22,23 +22,16 @@ const Home = () => {
           Grab your guitar and start playing!
         </p>
         <div>
-          {
-            !isLogin && (
-              <>
-                        <button type="button" onClick={()=> navigate("/chords")}><span></span>Chords</button>
 
-              </>
-            )
+          {
+            !isLogin && <button type="button" onClick={()=> navigate("/login")}><span></span>Chords</button>
           }
 
           {
-            !isLogin && (
-              <>
-                         <button type="button" onClick={()=> navigate("/songs")}><span></span>Songs</button>
+            isLogin && <button type="button" onClick={()=> navigate("/chords")}><span></span>Chords</button>
+          } 
 
-              </>
-            )
-          }
+           <button type="button" onClick={()=> navigate("/songs")}><span></span>Songs</button>
         </div>
       </div>
     </div>
